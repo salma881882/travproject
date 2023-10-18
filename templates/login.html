@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>login page</title>
+    <style>
+        .style1{
+        background-color:bisque;
+        }
+        .form-center{
+           display:flex;
+            justify-content: center;
+            padding-top:10% ;
+        }
+          .form{
+
+            justify-content: center;
+            margin-left: 27%;
+
+        }
+        .submit{
+            margin-left: 20%;
+        }
+  </style>
+</head>
+<body class="style1">
+
+<div class="form-center">
+
+<form action="login" method="post">
+    {% csrf_token %}
+    <br>
+     <img src="{% static 'images/logimage.jpg' %}" width="400px" height="400px"><br>
+     <div class="form">
+    <input type="text" name="username" placeholder="enter username"><br>
+    <br>
+    <input type="password" name="password" placeholder="password"><br>
+    <br>
+    <div class="submit">
+    <input type="submit">
+    </div>
+     </div>
+</form>
+</div>
+</body>
+</html>
+
+
+
